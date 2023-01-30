@@ -40,7 +40,7 @@ class CategoryFormRequest extends FormRequest
             ],
 
             'image' => [
-                'required',
+                'nullable',
                 'mimes:jpeg,jpg,png'
             ],
             'meta_title' => [
@@ -59,13 +59,13 @@ class CategoryFormRequest extends FormRequest
 
             ],
             'navbar_status' => [
-                'nullable',
-                'boolean'
+                'nullable'
+
 
             ],
             'status' => [
-                'nullable',
-                'boolean'
+                'nullable'
+
 
             ]
         ];

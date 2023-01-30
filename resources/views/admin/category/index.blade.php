@@ -25,6 +25,7 @@
                                     <th>Image</th>
                                     <th>Status</th>
                                     <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,7 +35,13 @@
                                     <td>{{ $item -> name }}</td>
                                     <td><img height="50px" width="50px" src="{{ asset('uploads/category/'. $item -> image) }}" alt="Img"></td>
                                     <td>{{ $item -> status == '1' ? 'Hidden': 'Show' }}</td>
-                                    <td></td>
+                                    <td>
+                                        <a class="btn btn-success" href="{{ url('admin/edit_category/'.$item ->id) }}">Edit</a>
+                                    </td>
+
+                                    <td>
+                                        <a class="btn btn-danger" href="{{ url('admin/delete_category/'.$item ->id) }}">Delete</a>
+                                    </td>
                                 </tr>
                                 @endforeach
 
