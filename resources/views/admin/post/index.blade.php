@@ -23,6 +23,8 @@
                                     <th>Post Name</th>
                                     <th>Category Name</th>
                                     <th>Status</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -32,6 +34,12 @@
                                     <td>{{ $item ->name }}</td>
                                     <td>{{ $item ->category->name }}</td>
                                     <td>{{ $item ->status== '1' ? 'Hidden': 'Visible' }}</td>
+                                    <td>
+                                        <a href="{{ url('admin/post/'.$item ->id) }}" class="btn btn-success">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ url('admin/delete_post/'.$item ->id) }}" class="btn btn-danger">Delete</a>
+                                    </td>
 
                                 </tr>
                                 @endforeach
